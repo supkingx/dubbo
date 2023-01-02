@@ -35,6 +35,9 @@ public class RoundRobinLoadBalance extends AbstractLoadBalance {
 
     private static final int RECYCLE_PERIOD = 60000;
 
+    /**
+     * 轮询实例
+     */
     protected static class WeightedRoundRobin {
         private int weight;
         private AtomicLong current = new AtomicLong(0);
